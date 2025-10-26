@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Ground
+comment1.params=
+comment1.target=Ground()
+comment2.params=speed
+comment2.target=void\ scroll(int)
+numComments=3
