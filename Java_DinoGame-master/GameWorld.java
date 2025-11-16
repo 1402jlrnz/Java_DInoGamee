@@ -82,6 +82,7 @@ public class GameWorld extends World {
         // 2. Clean up the menu actors
         removeObjects(getObjects(DifficultyButton.class));
         removeObjects(getObjects(StartText.class)); 
+        removeObjects(getObjects(SelectHighlight.class));
 
         // 3. Start the game!
         running = true;
@@ -114,6 +115,11 @@ public class GameWorld extends World {
         int centerY = getHeight() / 2;
         int spacing = 120; // Spacing for 4 buttons
 
+        // Add selection highlight at the top (stationary, slightly lower)
+        SelectHighlight sel = new SelectHighlight();
+        addObject(sel, centerX, 130);
+        if (sel.getImage() != null) sel.getImage().setTransparency(255);
+
         // Add the four buttons using (int) casting
         addObject(new EasyButton(), (int)(centerX - (spacing * 1.5)), centerY);   
         addObject(new MediumButton(), (int)(centerX - (spacing * 0.5)), centerY); 
@@ -129,27 +135,24 @@ public class GameWorld extends World {
             }
             return;
         }
-
-        // Wait for a difficulty button to be clicked
         if (!running) {
             return;
         }
 
-        // ------------------------------------------------------------------
-        // --- GAME IS RUNNING BELOW HERE ---
-        // ------------------------------------------------------------------
+ 
 
-        // ✅ Score update
+        // 
         int s = scoreBoard.getScore();
         scoreBoard.addScore(1);
 
-        // ✅ Level Advancement Check
+        // Level Advancement 
         if (currentLevel < 4 && s >= currentLevel * LEVEL_UP_SCORE) {
             currentLevel++;
             dino.levelUp(currentLevel); 
             
             // 🛑 NEW: Change the background to the new level's background
             updateBackground(currentLevel); 
+            Greenfoot.playSound("levelup.mp3");
             
             LevelUpMessage message = new LevelUpMessage(currentLevel);
             addObject(message, getWidth() / 2, getHeight() / 2);
