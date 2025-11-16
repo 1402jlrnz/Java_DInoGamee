@@ -3,6 +3,7 @@ import greenfoot.*;  // (World, Actor, GreenfootImage, Greenfoot, Font, Color, e
 public class ScoreBoard extends Actor
 {
     private int score = 0;
+    private Color textColor = Color.BLACK;
 
     public ScoreBoard()
     {
@@ -34,9 +35,16 @@ public class ScoreBoard extends Actor
         image.setFont(font);
 
         // Draw text
-        image.setColor(Color.BLACK);
+        image.setColor(textColor);
         image.drawString(txt, 6, 20);
 
         setImage(image);
+    }
+
+    public void setTextColor(Color c) {
+        if (c != null) {
+            textColor = c;
+            updateImage();
+        }
     }
 }

@@ -1,0 +1,7 @@
+#BlueJ class context
+comment0.target=Stage1Obstacle
+comment1.params=gameSpeed
+comment1.target=Stage1Obstacle(int)
+comment2.params=
+comment2.target=void\ act()
+numComments=3

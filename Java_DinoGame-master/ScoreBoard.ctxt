@@ -8,4 +8,6 @@ comment3.params=
 comment3.target=int\ getScore()
 comment4.params=
 comment4.target=void\ updateImage()
-numComments=5
+comment5.params=c
+comment5.target=void\ setTextColor(greenfoot.Color)
+numComments=6

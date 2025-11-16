@@ -1,0 +1,11 @@
+#BlueJ class context
+comment0.target=PlayButton
+comment1.params=
+comment1.target=PlayButton()
+comment2.params=w
+comment2.target=void\ addedToWorld(greenfoot.World)
+comment3.params=src
+comment3.target=greenfoot.GreenfootImage\ trimTransparentBorders(greenfoot.GreenfootImage)
+comment4.params=
+comment4.target=void\ act()
+numComments=5
