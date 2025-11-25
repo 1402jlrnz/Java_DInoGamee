@@ -1,0 +1,9 @@
+#BlueJ class context
+comment0.target=InstructionButton
+comment1.params=
+comment1.target=InstructionButton()
+comment2.params=w
+comment2.target=void\ addedToWorld(greenfoot.World)
+comment3.params=
+comment3.target=void\ act()
+numComments=4

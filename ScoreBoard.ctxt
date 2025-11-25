@@ -1,0 +1,13 @@
+#BlueJ class context
+comment0.target=ScoreBoard
+comment1.params=
+comment1.target=ScoreBoard()
+comment2.params=amount
+comment2.target=void\ addScore(int)
+comment3.params=
+comment3.target=int\ getScore()
+comment4.params=
+comment4.target=void\ updateImage()
+comment5.params=c
+comment5.target=void\ setTextColor(greenfoot.Color)
+numComments=6
